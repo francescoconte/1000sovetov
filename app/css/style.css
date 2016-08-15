@@ -347,6 +347,9 @@ ul,
 li {
   list-style-type: none;
 }
+section {
+  overflow: hidden;
+}
 .abs {
   position: absolute;
   display: table;
@@ -354,6 +357,14 @@ li {
   height: 100%;
   left: 0px;
   top: 0px;
+}
+h3 {
+  font-size: 45px;
+  color: #000;
+  font-weight: 700;
+  font-family: 'MuseoSansBold', sans-serif;
+  margin-bottom: 50px;
+  padding: 0 0 0 220px;
 }
 article {
   padding: 0 220px;
@@ -717,7 +728,7 @@ span.comment::before {
   font-weight: 700;
 }
 .reader .reader--block--right::before {
-  content: 'ЧИТАТЕЛЮ';
+  content: 'ЧИТАТЕЛ';
   position: absolute;
   display: block;
   font-size: 382px;
@@ -729,12 +740,59 @@ span.comment::before {
   width: 100%;
   text-align: left;
 }
+.reader .reader--block--right::after {
+  content: 'АМ';
+  position: absolute;
+  display: block;
+  font-size: 382px;
+  color: #f3f3f3;
+  font-family: 'MuseoSansBold', sans-serif;
+  font-weight: 700;
+  left: 0px;
+  bottom: -199px;
+  width: 100%;
+  text-align: left;
+}
 .author .author--block--left {
+  position: relative;
   float: left;
   width: 50%;
   height: 100%;
   display: table;
-  background: #fff;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+.author .author--block--left h2 {
+  font-size: 90px;
+  text-transform: uppercase;
+  -moz-transform: rotate(-90deg);
+  /* Для Firefox */
+  -ms-transform: rotate(-90deg);
+  /* Для IE */
+  -webkit-transform: rotate(-90deg);
+  /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(-90deg);
+  /* Для Opera */
+  transform: rotate(-90deg);
+  color: #000;
+  position: absolute;
+  left: -103px;
+  top: 127px;
+  font-weight: 700;
+}
+.author .author--block--left::before {
+  content: 'АВТОРУ';
+  position: absolute;
+  display: block;
+  font-size: 382px;
+  color: #f3f3f3;
+  font-family: 'MuseoSansBold', sans-serif;
+  font-weight: 700;
+  left: 0px;
+  top: -199px;
+  width: 100%;
+  text-align: center;
+  margin-left: 27px;
 }
 .author .author--block--right {
   float: left;
@@ -749,7 +807,6 @@ span.comment::before {
   float: left;
   width: 50%;
   height: 100%;
-  display: table;
   background-position: CENTER CENTER !important;
   background-repeat: no-repeat !important;
   background-size: COVER !important;
@@ -759,7 +816,40 @@ span.comment::before {
   float: left;
   width: 50%;
   height: 100%;
-  background: #fff;
+  display: table;
+  background: #f8f8f8;
+  position: relative;
+}
+.brand .brand--block--right h2 {
+  font-size: 90px;
+  text-transform: uppercase;
+  -moz-transform: rotate(-90deg);
+  /* Для Firefox */
+  -ms-transform: rotate(-90deg);
+  /* Для IE */
+  -webkit-transform: rotate(-90deg);
+  /* Для Safari, Chrome, iOS */
+  -o-transform: rotate(-90deg);
+  /* Для Opera */
+  transform: rotate(-90deg);
+  color: #000;
+  position: absolute;
+  left: -110px;
+  top: 220px;
+  font-weight: 700;
+}
+.brand .brand--block--right::before {
+  content: 'БРЕНДАМ';
+  position: absolute;
+  display: block;
+  font-size: 382px;
+  color: #f3f3f3;
+  font-family: 'MuseoSansBold', sans-serif;
+  font-weight: 700;
+  left: 0px;
+  top: -199px;
+  width: 100%;
+  text-align: left;
 }
 .socials {
   background-position: CENTER CENTER !important;
