@@ -3,7 +3,22 @@
 
 
 .abs {position: absolute; display: table; width: 100%; height: 100%; left: 0px; top: 0px; }
- 
+
+article {padding: 0 220px; float: left; width: 100%; position: relative;
+p {font-size: 24px; color: @coltxt; font-weight: 700; margin: 38px 0; line-height: 1.7;}
+
+ul {float: left; width: 100%;
+    li {display: block; margin: 30px 0px 30px 55px; font-size: 24px; color: @coltxt; font-weight: 700; float: left; width: 100%; position: relative;}      
+    li::before{content: ''; position: absolute; display: block; top:6px; left:-55px; width: 17px; height: 17px; .bgCCC; background: url(../img/dot.png);}  
+}
+    
+
+}
+
+span.comment {position: relative; font-size: 45px; color: @coltxt; font-family: @fontL; margin: 120px 0 0 0; float: left; width: 100%; padding: 0 0 0 280px;  line-height: 1.3;}
+span.comment::before {content: '«'; position: absolute; top:-89px; left:167px; font-weight: 300; font-size: 175px; color: #ececec;  font-family: 'Open Sans', sans-serif;}
+
+
 // Первый экран
 .home {.bgCC; background: url(../img/home.jpg);
 .home--block--left {position: relative; float: left; width: 50%; height: 100%; 
@@ -30,7 +45,7 @@ position: absolute; left: -323px; top:54px;}
 }
     
 .home--block--right {position: relative; float: left; width: 50%; height: 100%;
-article {float: left; width: 100%; margin-top: -130px;}
+article {float: left; width: 100%; margin-top: -130px; padding: 0px;}
 h3 {color: #fff; display: block; font-size: 88px; font-family: @fontB; font-weight: 900; text-transform: uppercase; float:left; width: 100%;}
 p {font-family: @fontB; color: #fff; font-size: 55px; margin-top: 147px; float:left; width: 100%;}
 .mouse-reed {position: relative; color: @colfirm2; font-family: @fontB; font-size: 20px;  margin: 128px 55px 0; float: left;
@@ -58,13 +73,20 @@ a:hover {color: @colfirm;}
 
 // Второй экран
 .about {
-.about--block--left {float: left; width: 50%; height: 100%; display: table; background: #fff;}
+.about--block--left {position: relative; float: left; width: 50%; height: 100%; display: table; background: #f8f8f8; overflow: hidden;
+h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-25px; top:126px; font-weight: 700;}  
+}
+.about--block--left::before {content: 'О НАС'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
+width: 100%; text-align: center;}
 .about--block--right {float: left; width: 50%; height: 100%; .bgCC; background: url(../img/about.jpg);}
 }
 // Третий экран
 .reader {
 .reader--block--left {float: left; width: 50%; height: 100%; display: table; .bgCC;  background: url(../img/reader.jpg);}
-.reader--block--right {float: left; width: 50%; height: 100%;  background: #fff;}
+.reader--block--right {position: relative; float: left; width: 50%; height: 100%;  background: #f8f8f8; overflow: hidden;  display: table;}
+h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-142px; top:220px; font-weight: 700;}  
+.reader--block--right::before {content: 'ЧИТАТЕЛЮ'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
+width: 100%; text-align: left;}    
 }
 // Четвертый экран
 .author {
