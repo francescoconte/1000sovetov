@@ -10,7 +10,7 @@ html
                 div.home--block--left
                     div.abs
                         div.middle
-                            div.home--timer--block
+                            div.home--timer--block.ani-timer#timer
                                 span.cifra-sh 20
                                 span.cifra 20
                                 span.week недель
@@ -20,23 +20,24 @@ html
                                     a.vk
                                     a.tv
                                 
-                    h1.logo 1000 советов
+                    h1.logo#logo 1000 советов
                 div.home--block--right
                     div.abs
                         div.middle
                             article
-                                h3 Привет! <br> Давайте знакомиться!
-                                p Мы команда портала 1000 советов, и собрались вместе для того, чтобы сделать Вашу жизнь проще и интереснее.
-                                a.mouse-reed <i></i> Узнать больше
-                nav
-                    div.middle
-                        a.button Войти и протестировать
-                        ul.topmenu
-                            li: a(href="#about-info") О нас
-                            li: a(href="#about-info") Читателю
-                            li: a(href="#about-info") Авторам
-                            li: a(href="#about-info") Брендам
-                            li: a(href="#about-info") Социальная миссия
+                                h3#hello Привет! <br> Давайте знакомиться!
+                                p#hello-d Мы команда портала 1000 советов, и собрались вместе для того, чтобы сделать Вашу жизнь проще и интереснее.
+                                a.mouse-reed#hello-scr(href="#about-info") <i></i> Узнать больше
+                nav#nav1
+                    .nav-block
+                        div.middle
+                            a.button Войти и протестировать
+                            ul.topmenu
+                                li: a(href="#about-info") О нас
+                                li: a(href="#about-info") Читателю
+                                li: a(href="#about-info") Авторам
+                                li: a(href="#about-info") Брендам
+                                li: a(href="#about-info") Социальная миссия
 
       
             
@@ -54,7 +55,10 @@ html
             section(class="section brand", id="section4")
                 include include/brand.jade
             section(class="section socials", id="section5")
-            footer(class="section", id="section5")
+                include include/social.jade
+            footer(class="section", id="section6")
+                include include/footer.jade
+                     
                     
                     
 

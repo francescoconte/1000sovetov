@@ -1,7 +1,82 @@
 @import "grundfile.less";
 
-section {overflow: hidden;}
 
+
+
+@keyframes timer {
+  100% { margin-top: 0px; }
+}
+
+@keyframes hello {
+  100% { opacity: 1; }
+}
+
+@keyframes title1 {
+  15% {  top:-765px; }
+    65% {
+        //color: #b82150; 
+        //.pov5;
+    }
+  100% { color: @coltxt; top: 126px; }
+}
+
+
+@keyframes title2 {
+  15% {  top:-820px; }
+  100% { color: @coltxt; top: 220px; }
+}
+
+@keyframes title3 {
+  15% {  top:-820px; }
+  100% { color: @coltxt; top: 67px; }
+}
+
+@keyframes title4 {
+  15% {  top:-820px; }
+  100% { color: @coltxt; top: 68px; }
+}
+
+
+@keyframes mous {
+    
+  50%  { top:-10px }      
+  100% { top:-25px }
+}
+
+
+
+.ani-timer {
+  animation: timer 1.5s 1 alternate forwards;
+}
+
+.hello {
+  animation: hello 1.5s 2s 1 alternate forwards;
+}
+
+
+.hello2 {
+  animation: hello 1.5s 3s 1 alternate forwards;
+}
+
+
+
+.hello3 {
+  animation: hello 1.5s 4s 1 alternate forwards;
+}
+
+
+#title1 { animation: title1 0.7s cubic-bezier(0,0,1,1) 0s 1 alternate forwards;  }
+#title2 { animation: title2 0.7s cubic-bezier(0,0,1,1) 0s 1 alternate forwards;  }
+#title3 { animation: title3 0.7s cubic-bezier(0,0,1,1) 0s 1 alternate forwards;  }
+#title4 { animation: title4 0.7s cubic-bezier(0,0,1,1) 0s 1 alternate forwards;  }
+
+
+
+
+
+
+section {overflow: hidden;}
+.content {position: relative;  display: table; width: 2000px; margin: 0 auto; height: 100%;}
 .abs {position: absolute; display: table; width: 100%; height: 100%; left: 0px; top: 0px; }
 h3 {font-size: 45px; color: @coltxt; font-weight: 700; font-family: @fontB; margin-bottom: 50px; padding: 0 0 0 220px;}
 article {padding: 0 220px; float: left; width: 100%; position: relative;
@@ -20,10 +95,11 @@ span.comment::before {content: '«'; position: absolute; top:-89px; left:167px; 
 
 // Первый экран
 .home {.bgCC; background: url(../img/home.jpg);
+    h3 {padding: 0px;}    
 .home--block--left {position: relative; float: left; width: 50%; height: 100%; 
 .abs {padding-left: 225px;}    
-.logo {position: absolute; display: block; left: 225px; top: 75px; width: 186px; height: 89px; .bgCCC; background: url(../img/logo.svg); font-size: 0px;}    
-.home--timer--block{position: relative; display: block; margin-left: 120px; 
+.logo {position: absolute; display: none; left: 225px; top: 75px; width: 186px; height: 89px; .bgCCC; background: url(../img/logo.svg); font-size: 0px;}    
+.home--timer--block{position: relative; display: none; margin-left: 120px; margin-top: -350px; 
 .cifra {position: relative; font-size: 350px; color: rgb(255, 236, 24); line-height: 0.171; font-family: @fontB; 
 background: -webkit-linear-gradient(#fba010, rgb(255, 236, 24)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
 .cifra-sh { position: absolute; display: block; left: 0px; top: 0px;  font-size: 350px; line-height: 0.171; text-shadow: 0px 11px 32px rgba(0, 0, 0, 0.34); position: absolute;
@@ -44,19 +120,22 @@ position: absolute; left: -323px; top:54px;}
 }
     
 .home--block--right {position: relative; float: left; width: 50%; height: 100%;
-article {float: left; width: 100%; margin-top: -130px; padding: 0px;}
-h3 {color: #fff; display: block; font-size: 88px; font-family: @fontB; font-weight: 900; text-transform: uppercase; float:left; width: 100%;}
-p {font-family: @fontB; color: #fff; font-size: 55px; margin-top: 147px; float:left; width: 100%;}
-.mouse-reed {position: relative; color: @colfirm2; font-family: @fontB; font-size: 20px;  margin: 128px 55px 0; float: left;
-i {position: absolute; display: block; height: 98px; width: 47px; .bgCCC; background: url(../img/mouse.png); top: -25px; left: -57px;}}
+article {float: left; width: 100%;  padding: 0px;}
+h3 {color: #fff; display: block; font-size: 88px; font-family: @fontB; font-weight: 900; text-transform: uppercase; float:left; width: 100%; opacity: 0; .med-speed;}
+p {font-family: @fontB; color: #fff; font-size: 55px; margin-top: 55px; float:left; width: 100%; opacity: 0;}
+.mouse-reed {position: relative; color: @colfirm2; font-family: @fontB; font-size: 20px;  margin: 128px 55px 0; float: left; opacity: 0;
+i {position: absolute; display: block; height: 98px; width: 47px; .bgCCC; background: url(../img/mouse.png); top: -25px; left: -57px;
+animation: mous 1s 4s infinite;  
+}}
     
 }    
 
     
-nav {position: absolute; display: table; height: 105px; top:0px; right: 0px;
+nav {position: absolute; display:none; top:0px; right: 0px; 
+.nav-block {float: right; display: table; height: 105px;}
 .button {float: right; display: inline-block; font-family: @fontB; color: #fff; font-size: 20px; 
 background: @colfirm; padding: 16px 33px 18px; margin-right: 50px; margin-left: 30px; border-radius: 35px; .m-speed;} 
-.button:hover {background: #1d5abf; }
+.button:hover {background: #1d5abf; color: #efca01;}
 }  
   
 ul {display: inline-block; float: left;  margin-top: 18px;
@@ -73,7 +152,7 @@ a:hover {color: @colfirm;}
 // Второй экран
 .about {
 .about--block--left {position: relative; float: left; width: 50%; height: 100%; display: table; background: #f8f8f8; overflow: hidden; 
-h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-25px; top:126px; font-weight: 700;}  
+h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-25px;  top:126px; top:-765px; font-weight: 700; display: none;}  
 }
 .about--block--left::before {content: 'О НАС'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
 width: 100%; text-align: center;}
@@ -83,7 +162,7 @@ width: 100%; text-align: center;}
 .reader {
 .reader--block--left {float: left; width: 50%; height: 100%; display: table; .bgCC;  background: url(../img/reader.jpg);}
 .reader--block--right {position: relative; float: left; width: 50%; height: 100%;  background: #f8f8f8; overflow: hidden;  display: table;}
-h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-142px; top:220px; font-weight: 700;}  
+h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-142px; top:220px; top:-820px; font-weight: 700; display: none;}  
 .reader--block--right::before {content: 'ЧИТАТЕЛ'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
 width: 100%; text-align: left;} 
 .reader--block--right::after {content: 'АМ'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; bottom:-199px;
@@ -92,7 +171,7 @@ width: 100%; text-align: left;}
 // Четвертый экран
 .author {
 .author--block--left {position: relative; float: left; width: 50%; height: 100%; display: table; background: #f8f8f8; overflow: hidden;
-h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-103px; top:127px; font-weight: 700;}  
+h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-103px; top:165px; top:-800px;  font-weight: 700; display: none;}  
 }
 .author--block--left::before {content: 'АВТОРУ'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
 width: 100%; text-align: center; margin-left: 27px;}
@@ -102,7 +181,7 @@ width: 100%; text-align: center; margin-left: 27px;}
 .brand {
 .brand--block--left {float: left; width: 50%; height: 100%; .bgCC;  background: url(../img/brand.jpg);}
 .brand--block--right {float: left; width: 50%; height: 100%; display: table;  background: #f8f8f8; position: relative;
-h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-110px; top:220px; font-weight: 700;}   
+h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-110px; top:220px; top:-850px; font-weight: 700; display: none;}   
 }
 .brand--block--right::before {content: 'БРЕНДАМ'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
 width: 100%; text-align: left;}     
@@ -112,12 +191,46 @@ width: 100%; text-align: left;}
 // Шестой экран
 
 .socials {.bgCC;  background: url(../img/social.jpg);
-    
-    
+.socials--block--left {position: relative; float: left; width: 50%; height: 100%; display: table; background: transparent; overflow: hidden;
+h2 {font-size: 150px; text-transform: uppercase;  color:#fff; font-weight: 700; padding: 0 90px 0 0px; margin-bottom: 120px;}  
+p {color: @coltxt; padding: 0 205px 0 0;}
 }
-
-footer {.bgCC;  background: url(../img/footer.jpg); 
+.socials--block--left {position: relative; float: left; width: 50%; height: 100%;     
     
+    
+    }}
+
+footer {.bgCC;  background: url(../img/footer.jpg); position: relative;
+
+    h4 {color: #fff; font-size: 60px; font-weight: 700; display: block; text-align: center;}
+    form {margin-top: 75px; text-align: center; width: 100%; float: left;
+        div {display: block; width: 100%; float: left;}
+        input {width: 590px; font-size: 24px; padding: 25px 20px; color: #5a5a5a; display: inline-block; text-align: center; margin: 25px 0;}       
+::-webkit-input-placeholder {color:#5a5a5a;}
+::-moz-placeholder          {color:#5a5a5a;}/* Firefox 19+ */
+:-moz-placeholder           {color:#5a5a5a;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#5a5a5a;}
+
+.form--button--block {margin-top: 55px;}        
+.form--button--send { color: #fff; font-size: 28px; font-weight: 700; padding: 35px 25px; width: 590px; text-align: center; background: @colfirm; border-radius: 60px; display: inline-block; .m-speed;}
+.form--button--send:hover {background: #1d5abf; color: #efca01;}    
+    }
+
+.sign-in {margin: 35px 0; color: #fff; font-size: 18px;
+    a {color: #efca01;}    
+}
+.footer {position: absolute; bottom: 0px; left:0px; height: 95px; width: 100%; background: #fff;}
+    .block-txt {float: left; width: 100%;
+        .left{float: left; width: 50%;
+        span {color: @coltxt; display: block; font-size: 18px; font-weight: 700;}} 
+        .right{float: right; width: 50%; text-align: right;
+        a {color: @coltxt; display: inline-block; font-size: 18px; font-weight: 700; text-align: right;
+            .real{display: inline-block; width: 147px; height: 24px; .bgCCC; background: url(../img/real.jpg); margin-left: 18px; margin-bottom: -5px;}    
+            }}
+        
+        
+    
+    }
     
 }
 

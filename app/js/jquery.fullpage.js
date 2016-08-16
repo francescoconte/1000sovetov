@@ -20,6 +20,9 @@
 })(typeof window !== 'undefined' ? window : this, function($, window, document, Math, undefined) {
     'use strict';
 
+    
+    // any
+   
     // keeping central set of classnames and selectors
     var WRAPPER =               'fullpage-wrapper';
     var WRAPPER_SEL =           '.' + WRAPPER;
@@ -1420,7 +1423,7 @@
             // using CSS3 translate functionality
             if (options.css3 && options.autoScrolling && !options.scrollBar) {
                 var translate3d = 'translate3d(0px, -' + v.dtop + 'px, 0px)';
-                                //alert(v.dtop);
+                
                 transformContainer(translate3d, true);
 
                 //even when the scrollingSpeed is 0 there's a little delay, which might cause the
@@ -1457,6 +1460,29 @@
                     }
                 });
             }
+            
+       
+            
+            
+        // if    
+            
+        var scrolToTop = v.dtop; 
+        var heightHome =  $(window).height();     
+       
+        if (heightHome == v.dtop) {  
+        $('#title1').fadeIn(1000);} else {
+            if (heightHome * 2 == v.dtop) {
+        $('#title2').fadeIn(1000);} else {
+            if (heightHome * 3 == v.dtop) {
+        $('#title3').fadeIn(1000);} else {
+            if (heightHome * 4 == v.dtop) {
+        $('#title4').fadeIn(1000);} 
+        }
+                
+            }
+        }
+            
+            
         }
 
         /**
