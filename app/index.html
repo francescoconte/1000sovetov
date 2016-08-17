@@ -2,9 +2,12 @@
 <html>
   <head>
     <title>учимся jade</title>
+    <!--build:css css/styles.min.css-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <!--endbuild-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <meta name="title" content="">
     <meta name="description" content="">
@@ -14,8 +17,21 @@
     <script src="js/main.js"></script>
   </head>
   <body>
+    <div id="fixed" class="nav-fixed"><a class="logo-fix"></a><span class="cifra-sh">20</span><span class="cifra">20 </span><span class="cifra-d">недель</span>
+      <div class="nav-block">
+        <div class="middle"><a href="#contact-info" class="button">Войти и протестировать</a>
+          <ul class="topmenu">
+            <li><a href="#about-info" id="nav1">О нас</a></li>
+            <li><a href="#reader-info" id="nav2">Читателю</a></li>
+            <li><a href="#author-info" id="nav3">Авторам</a></li>
+            <li><a href="#brand-info" id="nav4">Брендам</a></li>
+            <li><a href="#social-info" id="nav5">Социальная миссия</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div id="fullpage" class="wrapper">
-      <!-- первый экран 13-->
+      <!-- первый экран 1-->
       <section id="section0" class="section home">
         <div class="home--block--left">
           <div class="abs">
@@ -32,20 +48,20 @@
             <div class="middle">
               <article>
                 <h3 id="hello">Привет! <br> Давайте знакомиться!</h3>
-                <p id="hello-d">Мы команда портала 1000 советов, и собрались вместе для того, чтобы сделать Вашу жизнь проще и интереснее.</p><a id="hello-scr" href="#about-info" class="mouse-reed"><i></i> Узнать больше</a>
+                <p id="hello-d">Мы команда портала 1000 советов,<br> и собрались вместе для того, чтобы<br> сделать Вашу жизнь проще и интереснее.</p><a id="hello-scr" href="#about-info" class="mouse-reed"><i></i> Узнать больше</a>
               </article>
             </div>
           </div>
         </div>
-        <nav id="nav1">
+        <nav id="navigate1">
           <div class="nav-block">
-            <div class="middle"><a class="button">Войти и протестировать</a>
+            <div class="middle"><a href="#contact-info" class="button">Войти и протестировать</a>
               <ul class="topmenu">
                 <li><a href="#about-info">О нас</a></li>
-                <li><a href="#about-info">Читателю</a></li>
-                <li><a href="#about-info">Авторам</a></li>
-                <li><a href="#about-info">Брендам</a></li>
-                <li><a href="#about-info">Социальная миссия</a></li>
+                <li><a href="#reader-info">Читателю</a></li>
+                <li><a href="#author-info">Авторам</a></li>
+                <li><a href="#brand-info">Брендам</a></li>
+                <li><a href="#social-info">Социальная миссия</a></li>
               </ul>
             </div>
           </div>
@@ -55,7 +71,7 @@
         <div class="about--block--left">
           <div class="middle">
             <article>
-              <h2 id="title1">о нас</h2>
+              <h2 id="title1"><span>о нас</span></h2>
               <p>«1000 Советов» - это место, где делятся опытом <br> и знаниями, узнают новое и полезное для себя.</p>
               <p>Обширные тематики охватывают многочисленные жизненные <br> ситуации, с которыми сталкивается человек каждый день:<br> помощь в замене смесителя на кухне, проблема выбора наряда на праздник, замены средства вырабатывающего ток в авто конкретной модели или правильное выращивание огурцов.</p>
               <p>Мы следуем принципу предоставлять читателям только информативный и доступный контент, а редакция и эксперты круглосуточно рады помочь Вам советом и ответить на возникшие вопросы.</p>
@@ -69,7 +85,7 @@
         <div class="reader--block--right">
           <div class="middle">
             <article>
-              <h2 id="title2">Читателю</h2>
+              <h2 id="title2"><span>Читателю</span></h2>
               <ul>
                 <li>50 000 полезных статей на запуске</li>
                 <li>280 рубрик по 30 тематикам</li>
@@ -87,7 +103,7 @@
           <div class="middle">
             <h3>1000 советов – это реальная возможность:</h3>
             <article>
-              <h2 id="title3">авторам</h2>
+              <h2 id="title3"><span>авторам</span></h2>
               <ul>
                 <li>Делиться своим опытом с тысячами пользователей</li>
                 <li>Стать популярным экспертом и собрать тысячи подписчиков</li>
@@ -106,7 +122,7 @@
           <div class="middle">
             <h3>1000 советов позволит брендам:</h3>
             <article>
-              <h2 id="title4">брендам</h2>
+              <h2 id="title4"><span>брендам</span></h2>
               <ul>
                 <li>Установить тесный контакт между компанией и клиентами</li>
                 <li>Держать клиентов в курсе последних событий и новинок</li>

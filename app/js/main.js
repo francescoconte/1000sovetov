@@ -15,5 +15,5 @@ $(window).load(function () {
   $('#hello').addClass('hello');
   $('#hello-d').addClass('hello2');
   $('#hello-scr').addClass('hello3');
-  $('#nav1').delay(4500).fadeIn(1000);
+  $('#navigate1').delay(4500).fadeIn(1000);
 });

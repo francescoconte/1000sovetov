@@ -1469,14 +1469,66 @@
         var scrolToTop = v.dtop; 
         var heightHome =  $(window).height();     
        
-        if (heightHome == v.dtop) {  
-        $('#title1').fadeIn(1000);} else {
+        if (heightHome == v.dtop) { 
+            
+        $('#title1').fadeIn(1000);
+        $('#fixed').fadeIn(1000); 
+        $('#nav1').addClass('active');
+        $('#nav3').removeClass('active');
+        $('#nav5').removeClass('active');
+        $('#nav2').removeClass('active');
+        $('#nav4').removeClass('active'); }
+            
+            else {
             if (heightHome * 2 == v.dtop) {
-        $('#title2').fadeIn(1000);} else {
+                
+        $('#title2').fadeIn(1000);
+        $('#fixed').fadeIn(1000);
+        $('#nav2').addClass('active');
+        $('#nav3').removeClass('active');
+        $('#nav1').removeClass('active');
+        $('#nav5').removeClass('active');
+        $('#nav4').removeClass('active');   
+            } 
+            else {
             if (heightHome * 3 == v.dtop) {
-        $('#title3').fadeIn(1000);} else {
+        $('#title3').fadeIn(1000);
+        $('#fixed').fadeIn(1000);
+        $('#nav3').addClass('active');
+        $('#nav2').removeClass('active');
+        $('#nav1').removeClass('active');
+        $('#nav5').removeClass('active');
+        $('#nav4').removeClass('active');    
+        } 
+            else {
             if (heightHome * 4 == v.dtop) {
-        $('#title4').fadeIn(1000);} 
+        $('#title4').fadeIn(1000);
+        $('#fixed').fadeIn(1000);
+        $('#nav4').addClass('active');
+        $('#nav2').removeClass('active');
+        $('#nav3').removeClass('active');
+        $('#nav1').removeClass('active');
+        $('#nav5').removeClass('active');
+            
+            } 
+            else {
+            if (v.dtop == 0) {
+        $('#fixed').fadeOut(1000);
+            } else {
+            if (heightHome * 6 == v.dtop) {
+            $('#fixed').fadeOut(1000);} else {
+            if (heightHome * 5 == v.dtop) {
+            $('#nav5').addClass('active');
+            $('#nav2').removeClass('active');
+            $('#nav3').removeClass('active');
+            $('#nav4').removeClass('active');    
+            $('#nav1').removeClass('active');    
+            $('#fixed').fadeIn(1000);    
+            }    
+            }  
+        }
+            
+        }
         }
                 
             }

@@ -4,7 +4,8 @@
 
 
 @keyframes timer {
-  100% { margin-top: 0px; }
+  0% { transform: translate(0px, -350px); }
+  100% { transform: translate(0px, 0px); }
 }
 
 @keyframes hello {
@@ -12,28 +13,23 @@
 }
 
 @keyframes title1 {
-  15% {  top:-765px; }
-    65% {
-        //color: #b82150; 
-        //.pov5;
-    }
-  100% { color: @coltxt; top: 126px; }
+  15% {   transform: translate(0px, -765px);  }
+  100% { color: @coltxt;  transform: translate(0px, 0px);  }
 }
 
-
 @keyframes title2 {
-  15% {  top:-820px; }
-  100% { color: @coltxt; top: 220px; }
+  15% {  transform: translate(0px, -800px); }
+  100% { color: @coltxt; transform: translate(0px, 0px); }
 }
 
 @keyframes title3 {
-  15% {  top:-820px; }
-  100% { color: @coltxt; top: 67px; }
+  15% {  transform: translate(0px, -800px); }
+  100% { color: @coltxt; transform: translate(0px, 0px); }
 }
 
 @keyframes title4 {
-  15% {  top:-820px; }
-  100% { color: @coltxt; top: 68px; }
+  15% {  transform: translate(0px, -820px); }
+  100% { color: @coltxt; transform: translate(0px, 0px); }
 }
 
 
@@ -46,7 +42,7 @@
 
 
 .ani-timer {
-  animation: timer 1.5s 1 alternate forwards;
+  animation: timer 1s cubic-bezier(.1, -1.5, .1, 2.5) 1 forwards;
 }
 
 .hello {
@@ -65,20 +61,31 @@
 }
 
 
-#title1 { animation: title1 0.7s cubic-bezier(0,0,1,1) 0s 1 alternate forwards;  }
-#title2 { animation: title2 0.7s cubic-bezier(0,0,1,1) 0s 1 alternate forwards;  }
-#title3 { animation: title3 0.7s cubic-bezier(0,0,1,1) 0s 1 alternate forwards;  }
-#title4 { animation: title4 0.7s cubic-bezier(0,0,1,1) 0s 1 alternate forwards;  }
+#title1 { animation: title1 0.8s cubic-bezier(.1, -1.5, .1, 2.5) 0s 1 alternate forwards;  }
+#title2 { animation: title2 1.5s cubic-bezier(.1, -1.5, .1, 2.5) 0s 1 alternate forwards;  }
+#title3 { animation: title3 1.5s cubic-bezier(.1, -1.5, .1, 2.5) 0s 1 alternate forwards;  }
+#title4 { animation: title4 1.5s cubic-bezier(.1, -1.5, .1, 2.5) 0s 1 alternate forwards;  }
+
+h2{z-index: 9999999;}
+.nav-block {float: right; display: table; height: 105px;}
+.button {float: right; display: inline-block; font-family: @fontB; color: #fff; font-size: 20px; 
+background: @colfirm; padding: 14px 33px 17px; margin-right: 50px; margin-left: 30px; border-radius: 35px; .m-speed;} 
+.button:hover {background: #1d5abf; color: #efca01;}
+ 
+  
+ul {display: inline-block; float: left;  margin-top: 18px;
+li {float: left; 
+a { color: #fff; font-family: @fontB; color: #fff; margin-right: 60px; font-size: 20px; .m-speed;}
+a:hover {color: @colfirm;}
+}
+    }
 
 
 
-
-
-
-section {overflow: hidden;}
+section {overflow: hidden; min-height: 1285px;}
 .content {position: relative;  display: table; width: 2000px; margin: 0 auto; height: 100%;}
 .abs {position: absolute; display: table; width: 100%; height: 100%; left: 0px; top: 0px; }
-h3 {font-size: 45px; color: @coltxt; font-weight: 700; font-family: @fontB; margin-bottom: 50px; padding: 0 0 0 220px;}
+h3 {font-size: 45px; color: @coltxt; font-weight: 700; font-family: @fontB; margin-bottom: 50px; padding: 190px 0 0 220px;}
 article {padding: 0 220px; float: left; width: 100%; position: relative;
 p {font-size: 24px; color: @coltxt; font-weight: 700; margin: 38px 0; line-height: 1.7;}
 ul {float: left; width: 100%;
@@ -99,11 +106,17 @@ span.comment::before {content: '«'; position: absolute; top:-89px; left:167px; 
 .home--block--left {position: relative; float: left; width: 50%; height: 100%; 
 .abs {padding-left: 225px;}    
 .logo {position: absolute; display: none; left: 225px; top: 75px; width: 186px; height: 89px; .bgCCC; background: url(../img/logo.svg); font-size: 0px;}    
-.home--timer--block{position: relative; display: none; margin-left: 120px; margin-top: -350px; 
+.home--timer--block{position: relative; display: none; margin-left: 120px;
 .cifra {position: relative; font-size: 350px; color: rgb(255, 236, 24); line-height: 0.171; font-family: @fontB; 
-background: -webkit-linear-gradient(#fba010, rgb(255, 236, 24)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+
+
+background: linear-gradient(45deg, #e4ff00  33%, #fba010 66%, #fb9610);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+    }
 .cifra-sh { position: absolute; display: block; left: 0px; top: 0px;  font-size: 350px; line-height: 0.171; text-shadow: 0px 11px 32px rgba(0, 0, 0, 0.34); position: absolute;
-color: transparent; font-family: @fontB; }  
+color: transparent; font-family: @fontB;  letter-spacing: -10px;}  
 .week{display: block; font-family: @fontB; font-size: 120px; color: #ffec18;}
 .do-to {font-size: 42px; color: #fff; display: block; font-family: @fontL;}  
 .soc-ico {position: relative; display: block; float: left; margin-top: 50px;
@@ -152,7 +165,9 @@ a:hover {color: @colfirm;}
 // Второй экран
 .about {
 .about--block--left {position: relative; float: left; width: 50%; height: 100%; display: table; background: #f8f8f8; overflow: hidden; 
-h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-25px;  top:126px; top:-765px; font-weight: 700; display: none;}  
+h2 {font-size: 90px; text-transform: uppercase; color: @coltxt; position: absolute; left:-25px;  top:126px;  font-weight: 700; display: none;
+span {.pov2; display: block;}    
+}  
 }
 .about--block--left::before {content: 'О НАС'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
 width: 100%; text-align: center;}
@@ -162,7 +177,9 @@ width: 100%; text-align: center;}
 .reader {
 .reader--block--left {float: left; width: 50%; height: 100%; display: table; .bgCC;  background: url(../img/reader.jpg);}
 .reader--block--right {position: relative; float: left; width: 50%; height: 100%;  background: #f8f8f8; overflow: hidden;  display: table;}
-h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-142px; top:220px; top:-820px; font-weight: 700; display: none;}  
+h2 {font-size: 90px; text-transform: uppercase; color: @coltxt; position: absolute; left:-142px; top:220px; font-weight: 700; display: none;
+span {.pov2; display: block;}       
+}  
 .reader--block--right::before {content: 'ЧИТАТЕЛ'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
 width: 100%; text-align: left;} 
 .reader--block--right::after {content: 'АМ'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; bottom:-199px;
@@ -171,9 +188,10 @@ width: 100%; text-align: left;}
 // Четвертый экран
 .author {
 .author--block--left {position: relative; float: left; width: 50%; height: 100%; display: table; background: #f8f8f8; overflow: hidden;
-h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-103px; top:165px; top:-800px;  font-weight: 700; display: none;}  
+h2 {font-size: 90px; text-transform: uppercase;  color: @coltxt; position: absolute; left:-103px; top:67px;  font-weight: 700; display: none;
+span {.pov2;  display: block;}}  
 }
-.author--block--left::before {content: 'АВТОРУ'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
+.author--block--left::before {content: 'АВТО'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
 width: 100%; text-align: center; margin-left: 27px;}
 .author--block--right {float: left; width: 50%; height: 100%; .bgCC; background: url(../img/author.jpg);}
 }
@@ -181,7 +199,8 @@ width: 100%; text-align: center; margin-left: 27px;}
 .brand {
 .brand--block--left {float: left; width: 50%; height: 100%; .bgCC;  background: url(../img/brand.jpg);}
 .brand--block--right {float: left; width: 50%; height: 100%; display: table;  background: #f8f8f8; position: relative;
-h2 {font-size: 90px; text-transform: uppercase; .pov2; color: @coltxt; position: absolute; left:-110px; top:220px; top:-850px; font-weight: 700; display: none;}   
+h2 {font-size: 90px; text-transform: uppercase; color: @coltxt; position: absolute; left:-110px; top:67px;  font-weight: 700; display: none;
+span {.pov2;  display: block;}    }   
 }
 .brand--block--right::before {content: 'БРЕНДАМ'; position: absolute; display: block; font-size: 382px; color: #f3f3f3; font-family: @fontB; font-weight: 700; left: 0px; top:-199px;
 width: 100%; text-align: left;}     
@@ -192,7 +211,7 @@ width: 100%; text-align: left;}
 
 .socials {.bgCC;  background: url(../img/social.jpg);
 .socials--block--left {position: relative; float: left; width: 50%; height: 100%; display: table; background: transparent; overflow: hidden;
-h2 {font-size: 150px; text-transform: uppercase;  color:#fff; font-weight: 700; padding: 0 90px 0 0px; margin-bottom: 120px;}  
+h2 {font-size: 150px; text-transform: uppercase;  color:#fff; font-weight: 700; padding: 200px 90px 0 0px; margin-bottom: 120px;}   
 p {color: @coltxt; padding: 0 205px 0 0;}
 }
 .socials--block--left {position: relative; float: left; width: 50%; height: 100%;     
@@ -235,3 +254,350 @@ footer {.bgCC;  background: url(../img/footer.jpg); position: relative;
 }
 
 
+
+.nav-fixed {position: fixed; display: none; width: 100%; height: 75px; background-color: rgb(255, 255, 255); box-shadow: 0px 11px 90px 0px rgba(0, 0, 0, 0.28); 
+left: 0px; top: 110px; z-index: 99999; 
+    .logo-fix {float: left; width: 100px; height: 47px; .bgCCC; background: url(../img/logo-fix.svg); margin-left: 80px; margin-top: 15px; margin-right: 45px;}    
+.nav-block {float: right; display: table; height: 75px;} 
+    
+ul {display: inline-block; float: left;  margin-top: 18px;
+li {float: left; 
+a { color: #fff; font-family: @fontB; color: @coltxt; margin-right: 60px; font-size: 20px; .m-speed;}
+a:hover {color: @colfirm;}
+a.active {color: @colfirm;}
+}
+} 
+    
+.cifra {position: relative; font-size: 350px; color: #fba010; line-height: 0.171; font-family: @fontB; letter-spacing: -10px; z-index: 999;
+
+
+background: linear-gradient(45deg, #e4ff00  33%, #fba010 66%, #fb9610);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.cifra-d { position: absolute; top:-61px; font-size: 145px; color: #ffec18; margin-left: -25px; font-family: @fontB;}
+.cifra-d::before {content: 'до старта'; position: absolute; top: 154px; left: 40px; font-size: 48px; color: @coltxt; margin-left: -25px; font-family: @fontL;}
+    
+.cifra-sh { position: absolute; display: block; left: 225px; top: 0px;  font-size: 350px; line-height: 0.171; text-shadow: 0px 11px 32px rgba(0, 0, 0, 0.34); position: absolute;
+color: transparent; font-family: @fontB; letter-spacing: -10px; z-index: 998; }  
+    
+}
+
+.nav-fixed::before {content: ''; position: absolute; display: block; width: 50%; height: 100%; left: 0px; top: 0px;     box-shadow: 1px 11px 200px 88px rgba(255, 254, 254, 0.85);}
+
+
+@media screen and (min-width:1800px) and (max-width:2559px)   {
+    
+    
+
+    
+    
+    
+@keyframes title1 {
+  15% {   transform: translate(0px, -765px);  }
+  100% { color: @coltxt;  transform: translate(0px, 0px);  }
+}
+
+@keyframes title2 {
+  15% {  transform: translate(0px, -800px); }
+  100% { color: @coltxt; transform: translate(0px, 0px); }
+}
+
+@keyframes title3 {
+  15% {  transform: translate(0px, -800px); }
+  100% { color: @coltxt; transform: translate(0px, 0px); }
+}
+
+@keyframes title4 {
+  15% {  transform: translate(0px, -820px); }
+  100% { color: @coltxt; transform: translate(0px, 0px); }
+} 
+    
+    
+    
+    
+    
+section {
+    overflow: hidden;
+    min-height: 900px;
+}
+    
+.home .home--block--left .abs {
+    padding-left: 120px;
+}    
+  
+.home .home--block--left .home--timer--block .cifra {
+    font-size: 200px;
+}  
+    
+.home .home--block--left .home--timer--block .cifra-sh {
+    font-size: 200px;
+}    
+    
+.home .home--block--left .home--timer--block .week {
+    font-size: 72px;
+}
+
+.home .home--block--left .home--timer--block .do-to {
+    font-size: 30px;
+} 
+    
+.home .home--block--left .home--timer--block::before {
+    content: 'осталось';
+    font-size: 77px;
+    left: -235px;
+    top: 48px;
+}
+    
+.home .home--block--left .home--timer--block {
+    position: relative;
+    display: none;
+    margin-left: 80px;
+    transform: translate(0px, -350px); 
+}
+    
+.home .home--block--left .logo {
+    left: 117px;
+    top: 20px;
+    width: 140px;
+    height: 89px;
+}
+    
+.home .home--block--right h3 {
+    font-size: 45px;
+}    
+  
+.home .home--block--right p {
+    font-size: 30px;
+    margin-top: 15px;
+}
+    
+.home .home--block--right .mouse-reed i {
+    height: 60px;
+    top: -25px;
+    left: -57px;
+}
+    
+    
+    
+.home ul li a {
+    margin-right: 35px;
+    font-size: 14px;
+}
+    
+.home nav .button {
+    font-size: 14px;
+}
+   
+.home .home--block--right .mouse-reed {
+    font-size: 16px;
+    margin: 70px 55px 0;
+}    
+
+.nav-fixed .cifra {
+    position: relative;
+    font-size: 210px;
+        top: 25px;
+}  
+    
+    
+.nav-fixed .cifra-sh {
+    display: block;
+    left: 225px;
+    top: 25px;
+    font-size: 210px;
+}
+    
+.nav-fixed ul li a {
+    font-size: 14px;
+    margin-right: 30px;
+}
+    
+.nav-fixed .cifra-d {
+    top: -12px;
+    font-size: 77px;
+    margin-left: -5px;
+}
+    
+.nav-fixed .cifra-d::before {
+    top: 82px;
+    left: 34px;
+    font-size: 29px;
+    margin-left: -31px;
+}
+    
+.nav-fixed {
+    top: 42px;
+    height: 60px;
+}
+
+.nav-fixed .nav-block {
+    height: 60px;
+}
+
+.nav-fixed::before {
+    content: '';
+    width: 45%;
+}
+    
+.nav-fixed .logo-fix {
+    width: 100px;
+    height: 35px;
+}
+    
+.button {
+    font-size: 14px;
+}
+    
+article p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+    
+    
+.about .about--block--left h2 {
+    font-size: 60px;
+    left: 30px;
+    top: 90px;
+}
+    
+article ul li {
+    margin: 15px 0px 20px 50px;
+    font-size: 16px;
+}
+    
+    
+article ul li::before {
+    content: '';
+    top: 3px;
+    left: -55px;
+    width: 14px;
+    height: 14px;
+}
+  
+span.comment {
+    font-size: 26px;
+    margin: 60px 0 0 0;
+    padding: 0 0 0 280px;
+}
+    
+span.comment::before {
+    content: '«';
+    top: -52px;
+    left: 206px;
+    font-size: 100px;
+}
+    
+.reader h2 {
+    font-size: 60px;
+    left: -56px;
+    top: 165px;
+}
+    
+.author .author--block--left h2 {
+    font-size: 60px;
+    left: -34px;
+    top: -18px;
+
+}
+    
+.brand .brand--block--right h2 {
+    font-size: 60px;
+    color: #000;
+    position: absolute;
+    left: -35px;
+    top: 25px;
+    font-weight: 700;
+    display: none;
+}
+    
+.content {
+    position: relative;
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+    
+.socials .socials--block--left h2 {
+    font-size: 85px;
+    color: #fff;
+    padding: 180px 90px 0 0px;
+    margin-bottom: 60px;
+}
+    
+h3 {
+    font-size: 35px;
+    color: #000;
+    font-weight: 700;
+    font-family: 'MuseoSansBold', sans-serif;
+    margin-bottom: 50px;
+    padding: 95px 0 0 220px;
+}
+
+footer h4 {
+    font-size: 40px;
+}
+    
+footer form {
+    margin-top: 45px;
+}
+    
+
+footer form .form--button--send {
+    font-size: 20px;
+    padding: 25px 16px;
+    width: 590px;
+    border-radius: 60px;
+}
+    
+    
+.about .about--block--left::before {
+    font-size: 270px;    
+    top: -155px;
+}
+
+.reader .reader--block--right::before {
+    font-size: 270px;    
+    top: -155px;
+}
+
+.reader .reader--block--right::after {
+    font-size: 270px;    
+    bottom: -155px;
+}
+    
+.brand .brand--block--right::before {
+    font-size: 300px;    
+    top: -155px;
+}
+      
+.author .author--block--left::before {
+    font-size: 300px;    
+    top: -155px;
+}
+    
+footer form input {
+    width: 590px;
+    font-size: 20px;
+    padding: 12px;
+    color: #5a5a5a;
+    margin: 20px 0;
+}
+
+footer .block-txt .left span {
+    font-size: 16px;
+}    
+ 
+footer .block-txt .right a {
+    font-size: 16px;
+}    
+    
+footer .sign-in {
+    margin: 25px 0;
+    color: #fff;
+    font-size: 16px;
+}
+    
+}

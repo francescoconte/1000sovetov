@@ -4,8 +4,22 @@ html
     head
         include include/head.jade
     body
+        .nav-fixed#fixed
+            a.logo-fix
+            span.cifra-sh 20
+            span.cifra 20 
+            span.cifra-d недель
+            .nav-block
+                div.middle
+                    a.button(href="#contact-info") Войти и протестировать
+                    ul.topmenu
+                        li: a(href="#about-info", id="nav1") О нас
+                        li: a(href="#reader-info", id="nav2") Читателю
+                        li: a(href="#author-info", id="nav3") Авторам
+                        li: a(href="#brand-info", id="nav4") Брендам
+                        li: a(href="#social-info", id="nav5") Социальная миссия
         div.wrapper#fullpage
-            // первый экран 13
+            // первый экран 1
             section(class="section home", id="section0")
                 div.home--block--left
                     div.abs
@@ -26,18 +40,18 @@ html
                         div.middle
                             article
                                 h3#hello Привет! <br> Давайте знакомиться!
-                                p#hello-d Мы команда портала 1000 советов, и собрались вместе для того, чтобы сделать Вашу жизнь проще и интереснее.
+                                p#hello-d Мы команда портала 1000 советов,<br> и собрались вместе для того, чтобы<br> сделать Вашу жизнь проще и интереснее.
                                 a.mouse-reed#hello-scr(href="#about-info") <i></i> Узнать больше
-                nav#nav1
+                nav#navigate1
                     .nav-block
                         div.middle
-                            a.button Войти и протестировать
+                            a.button(href="#contact-info") Войти и протестировать
                             ul.topmenu
                                 li: a(href="#about-info") О нас
-                                li: a(href="#about-info") Читателю
-                                li: a(href="#about-info") Авторам
-                                li: a(href="#about-info") Брендам
-                                li: a(href="#about-info") Социальная миссия
+                                li: a(href="#reader-info") Читателю
+                                li: a(href="#author-info") Авторам
+                                li: a(href="#brand-info") Брендам
+                                li: a(href="#social-info") Социальная миссия
 
       
             
