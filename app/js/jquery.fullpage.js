@@ -1472,6 +1472,9 @@
         if (heightHome == v.dtop) { 
             
         $('#title1').fadeIn(1000);
+        $('#title3').fadeOut();
+        $('#title2').fadeOut();
+        $('#title4').fadeOut();
         $('#fixed').fadeIn(1000); 
         $('#nav1').addClass('active');
         $('#nav3').removeClass('active');
@@ -1481,8 +1484,10 @@
             
             else {
             if (heightHome * 2 == v.dtop) {
-                
         $('#title2').fadeIn(1000);
+        $('#title3').fadeOut();
+        $('#title1').fadeOut();
+        $('#title4').fadeOut();        
         $('#fixed').fadeIn(1000);
         $('#nav2').addClass('active');
         $('#nav3').removeClass('active');
@@ -1492,16 +1497,20 @@
             } 
             else {
             if (heightHome * 3 == v.dtop) {
+        $('#title1').fadeOut();
+        $('#title2').fadeOut();
+        $('#title4').fadeOut();
         $('#title3').fadeIn(1000);
         $('#fixed').fadeIn(1000);
         $('#nav3').addClass('active');
         $('#nav2').removeClass('active');
         $('#nav1').removeClass('active');
         $('#nav5').removeClass('active');
-        $('#nav4').removeClass('active');    
+        $('#nav4').removeClass('active');      
         } 
             else {
             if (heightHome * 4 == v.dtop) {
+        $('#title1').fadeOut();
         $('#title4').fadeIn(1000);
         $('#fixed').fadeIn(1000);
         $('#nav4').addClass('active');
@@ -1514,16 +1523,25 @@
             else {
             if (v.dtop == 0) {
         $('#fixed').fadeOut(1000);
+        $('#title1').fadeOut();        
             } else {
             if (heightHome * 6 == v.dtop) {
-            $('#fixed').fadeOut(1000);} else {
+            $('#fixed').fadeOut(1000);
+            
+            
+            
+            
+            } else {
             if (heightHome * 5 == v.dtop) {
+            $('#title5').delay(500).fadeIn(1000);    
+            $('.txt').delay(500).fadeIn(1000);    
             $('#nav5').addClass('active');
             $('#nav2').removeClass('active');
             $('#nav3').removeClass('active');
             $('#nav4').removeClass('active');    
             $('#nav1').removeClass('active');    
-            $('#fixed').fadeIn(1000);    
+            $('#fixed').fadeIn(1000);  
+            $('#title1').fadeOut();
             }    
             }  
         }

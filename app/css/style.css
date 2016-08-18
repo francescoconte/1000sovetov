@@ -349,7 +349,7 @@ li {
 }
 @keyframes timer {
   0% {
-    transform: translate(0px, -350px);
+    transform: translate(0px, -100px);
   }
   100% {
     transform: translate(0px, 0px);
@@ -361,39 +361,50 @@ li {
   }
 }
 @keyframes title1 {
-  15% {
-    transform: translate(0px, -765px);
-  }
   100% {
-    color: #000;
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes title1-1 {
+  100% {
     transform: translate(0px, 0px);
   }
 }
 @keyframes title2 {
   15% {
-    transform: translate(0px, -800px);
+    transform: translate(0px, 800px);
   }
   100% {
-    color: #000;
     transform: translate(0px, 0px);
   }
 }
 @keyframes title3 {
   15% {
-    transform: translate(0px, -800px);
+    transform: translate(0px, 800px);
   }
   100% {
-    color: #000;
     transform: translate(0px, 0px);
   }
 }
 @keyframes title4 {
   15% {
-    transform: translate(0px, -820px);
+    transform: translate(0px, 100px);
   }
   100% {
-    color: #000;
     transform: translate(0px, 0px);
+  }
+}
+@keyframes txt {
+  15% {
+    transform: translate(0px, 250px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes title--to {
+  100% {
+    transform: translate(0px, 820px);
   }
 }
 @keyframes mous {
@@ -404,8 +415,13 @@ li {
     top: -25px;
   }
 }
+.txt {
+  transform: translate(0px, 250px);
+  animation: txt 0.6s linear 0s 1 alternate forwards;
+  display: none;
+}
 .ani-timer {
-  animation: timer 1s cubic-bezier(0.1, -1.5, 0.1, 2.5) 1 forwards;
+  animation: timer 1s linear 1 forwards;
 }
 .hello {
   animation: hello 1.5s 2s 1 alternate forwards;
@@ -416,20 +432,12 @@ li {
 .hello3 {
   animation: hello 1.5s 4s 1 alternate forwards;
 }
-#title1 {
-  animation: title1 0.8s cubic-bezier(0.1, -1.5, 0.1, 2.5) 0s 1 alternate forwards;
-}
-#title2 {
-  animation: title2 1.5s cubic-bezier(0.1, -1.5, 0.1, 2.5) 0s 1 alternate forwards;
-}
-#title3 {
-  animation: title3 1.5s cubic-bezier(0.1, -1.5, 0.1, 2.5) 0s 1 alternate forwards;
-}
-#title4 {
-  animation: title4 1.5s cubic-bezier(0.1, -1.5, 0.1, 2.5) 0s 1 alternate forwards;
-}
 h2 {
   z-index: 9999999;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .nav-block {
   float: right;
@@ -443,7 +451,7 @@ h2 {
   color: #fff;
   font-size: 20px;
   background: #1f60cd;
-  padding: 14px 33px 17px;
+  padding: 16px 33px 17px;
   margin-right: 50px;
   margin-left: 30px;
   border-radius: 35px;
@@ -611,6 +619,16 @@ span.comment::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@-moz-document url-prefix() {
+  .home .home--block--left .home--timer--block .cifra {
+    position: relative;
+    font-size: 350px;
+    color: #ffec18;
+    line-height: 0.171;
+    font-family: 'MuseoSansBold', sans-serif;
+    background: none;
+  }
+}
 .home .home--block--left .home--timer--block .cifra-sh {
   display: block;
   left: 0px;
@@ -761,7 +779,7 @@ span.comment::before {
   color: #fff;
   font-size: 20px;
   background: #1f60cd;
-  padding: 16px 33px 18px;
+  padding: 18px 33px 17px;
   margin-right: 50px;
   margin-left: 30px;
   border-radius: 35px;
@@ -813,6 +831,8 @@ span.comment::before {
   top: 126px;
   font-weight: 700;
   display: none;
+  transform: translate(0px, 800px);
+  animation: title1 0.8s linear 0s 1 alternate forwards;
 }
 .about .about--block--left h2 span {
   -moz-transform: rotate(-90deg);
@@ -876,6 +896,8 @@ span.comment::before {
   top: 220px;
   font-weight: 700;
   display: none;
+  transform: translate(0px, 800px);
+  animation: title1 0.6s linear 0s 1 alternate forwards;
 }
 .reader h2 span {
   -moz-transform: rotate(-90deg);
@@ -933,6 +955,9 @@ span.comment::before {
   top: 67px;
   font-weight: 700;
   display: none;
+  transform: translate(0px, 765px);
+  transform: translate(0px, 800px);
+  animation: title3 0.8s linear 0s 1 alternate forwards;
 }
 .author .author--block--left h2 span {
   -moz-transform: rotate(-90deg);
@@ -995,6 +1020,8 @@ span.comment::before {
   top: 67px;
   font-weight: 700;
   display: none;
+  transform: translate(0px, 800px);
+  animation: title4 0.8s linear 0s 1 alternate forwards;
 }
 .brand .brand--block--right h2 span {
   -moz-transform: rotate(-90deg);
@@ -1039,14 +1066,18 @@ span.comment::before {
 .socials .socials--block--left h2 {
   font-size: 150px;
   text-transform: uppercase;
-  color: #fff;
+  color: #fff !important;
   font-weight: 700;
   padding: 200px 90px 0 0px;
   margin-bottom: 120px;
+  display: none;
+  transform: translate(0px, 100px);
+  animation: title4 .5s linear 0s 1 alternate forwards;
 }
 .socials .socials--block--left p {
   color: #000;
   padding: 0 205px 0 0;
+  display: none;
 }
 .socials .socials--block--left {
   position: relative;
@@ -1242,6 +1273,24 @@ footer .block-txt .right a .real {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.nav-fixed .cifra .cifra {
+  position: relative;
+  font-size: 350px;
+  color: #ffec18;
+  line-height: 0.171;
+  font-family: 'MuseoSansBold', sans-serif;
+  background: none;
+}
+@-moz-document url-prefix() {
+  .nav-fixed .cifra {
+    position: relative;
+    font-size: 350px;
+    color: #ffec18;
+    line-height: 0.171;
+    font-family: 'MuseoSansBold', sans-serif;
+    background: none;
+  }
+}
 .nav-fixed .cifra-d {
   position: absolute;
   top: -61px;
@@ -1319,6 +1368,18 @@ footer .block-txt .right a .real {
       color: #000;
       transform: translate(0px, 0px);
     }
+  }
+  #title1 {
+    animation: title1 0.5s linear 0s 1 alternate forwards;
+  }
+  #title2 {
+    animation: title2 0.5s linear 0s 1 alternate forwards;
+  }
+  #title3 {
+    animation: title3 0.5s linear 0s 1 alternate forwards;
+  }
+  #title4 {
+    animation: title4 0.5s linear 0s 1 alternate forwards;
   }
   section {
     overflow: hidden;
@@ -1432,6 +1493,7 @@ footer .block-txt .right a .real {
     font-size: 60px;
     left: 30px;
     top: 90px;
+    transform: translate(0px, -765px);
   }
   article ul li {
     margin: 15px 0px 20px 50px;
@@ -1464,6 +1526,7 @@ footer .block-txt .right a .real {
     font-size: 60px;
     left: -34px;
     top: -18px;
+    transform: translate(0px, -800px);
   }
   .brand .brand--block--right h2 {
     font-size: 60px;
@@ -1473,6 +1536,7 @@ footer .block-txt .right a .real {
     top: 25px;
     font-weight: 700;
     display: none;
+    transform: translate(0px, -800px);
   }
   .content {
     position: relative;
@@ -1544,5 +1608,615 @@ footer .block-txt .right a .real {
     margin: 25px 0;
     color: #fff;
     font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1799px) {
+  @keyframes title1 {
+    15% {
+      transform: translate(0px, -765px);
+    }
+    100% {
+      color: #000;
+      transform: translate(0px, 0px);
+    }
+  }
+  @keyframes title2 {
+    15% {
+      transform: translate(0px, -800px);
+    }
+    100% {
+      color: #000;
+      transform: translate(0px, 0px);
+    }
+  }
+  @keyframes title3 {
+    15% {
+      transform: translate(0px, -800px);
+    }
+    100% {
+      color: #000;
+      transform: translate(0px, 0px);
+    }
+  }
+  @keyframes title4 {
+    15% {
+      transform: translate(0px, -820px);
+    }
+    100% {
+      color: #000;
+      transform: translate(0px, 0px);
+    }
+  }
+  #title1 {
+    animation: title1 0.8s linear 0s 1 alternate forwards;
+  }
+  #title2 {
+    animation: title2 0.8s linear 0s 1 alternate forwards;
+  }
+  #title3 {
+    animation: title3 0.8s linear 0s 1 alternate forwards;
+  }
+  #title4 {
+    animation: title4 0.8s linear 0s 1 alternate forwards;
+  }
+  section {
+    overflow: hidden;
+    min-height: 800px;
+  }
+  article {
+    padding: 0 100px 0 130px;
+  }
+  .home .home--block--left .abs {
+    padding-left: 75px;
+  }
+  .home .home--block--left .home--timer--block .cifra {
+    font-size: 200px;
+  }
+  .home .home--block--left .home--timer--block .cifra-sh {
+    font-size: 200px;
+  }
+  .home .home--block--left .home--timer--block .week {
+    font-size: 72px;
+  }
+  .home .home--block--left .home--timer--block .do-to {
+    font-size: 30px;
+  }
+  .home .home--block--left .home--timer--block::before {
+    content: 'осталось';
+    font-size: 77px;
+    left: -235px;
+    top: 48px;
+  }
+  .home .home--block--left .home--timer--block {
+    position: relative;
+    display: none;
+    margin-left: 80px;
+    transform: translate(0px, -350px);
+  }
+  .home .home--block--left .logo {
+    left: 75px;
+    top: 20px;
+    width: 110px;
+    height: 89px;
+  }
+  .home .home--block--right h3 {
+    font-size: 45px;
+  }
+  .home .home--block--right p {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  .home .home--block--right .mouse-reed i {
+    height: 60px;
+    top: -25px;
+    left: -57px;
+  }
+  .home ul li a {
+    margin-right: 35px;
+    font-size: 14px;
+  }
+  .home nav .button {
+    font-size: 14px;
+  }
+  .home .home--block--right .mouse-reed {
+    font-size: 16px;
+    margin: 70px 55px 0;
+  }
+  .nav-fixed .cifra {
+    position: relative;
+    font-size: 140px;
+    top: 20px;
+  }
+  .nav-fixed .cifra-sh {
+    display: block;
+    left: 150px;
+    top: 11px;
+    font-size: 140px;
+  }
+  .nav-fixed ul li a {
+    font-size: 14px;
+    margin-right: 30px;
+  }
+  .nav-fixed .cifra-d {
+    top: 6px;
+    font-size: 52px;
+    margin-left: 3px;
+  }
+  .nav-fixed .cifra-d::before {
+    top: 57px;
+    left: 34px;
+    font-size: 20px;
+    margin-left: -31px;
+  }
+  .nav-fixed {
+    top: 42px;
+    height: 55px;
+  }
+  .nav-fixed .nav-block {
+    height: 55px;
+  }
+  .nav-fixed .logo-fix {
+    width: 100px;
+    height: 35px;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+  .button {
+    font-size: 14px;
+    padding: 10px 30px 12px;
+  }
+  .nav-fixed ul {
+    margin-top: 12px;
+  }
+  article p {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+  .about .about--block--left h2 {
+    font-size: 40px;
+    left: 18px;
+    top: 65px;
+    transform: translate(0px, -765px);
+  }
+  article ul li {
+    margin: 15px 0px 20px 40px;
+    font-size: 16px;
+  }
+  article ul li::before {
+    content: '';
+    top: 3px;
+    left: -45px;
+    width: 14px;
+    height: 14px;
+  }
+  span.comment {
+    font-size: 24px;
+    margin: 60px 0 0 0;
+    padding: 0 0 0 180px;
+  }
+  span.comment::before {
+    content: '«';
+    top: -41px;
+    left: 125px;
+    font-size: 80px;
+  }
+  .reader h2 {
+    font-size: 40px;
+    left: -46px;
+    top: 124px;
+  }
+  .author .author--block--left h2 {
+    font-size: 40px;
+    left: -30px;
+    top: -44px;
+    transform: translate(0px, -800px);
+  }
+  .brand .brand--block--right h2 {
+    font-size: 40px;
+    color: #000;
+    position: absolute;
+    left: -30px;
+    top: -8px;
+    font-weight: 700;
+    display: none;
+    transform: translate(0px, -800px);
+  }
+  .content {
+    position: relative;
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .socials .socials--block--left h2 {
+    font-size: 75px;
+    color: #fff;
+    padding: 130px 90px 0 0px;
+    margin-bottom: 55px;
+  }
+  h3 {
+    font-size: 31px;
+    color: #000;
+    font-weight: 700;
+    font-family: 'MuseoSansBold', sans-serif;
+    margin-bottom: 50px;
+    padding: 93px 0 0 122px;
+  }
+  footer h4 {
+    font-size: 40px;
+  }
+  footer form {
+    margin-top: 45px;
+  }
+  footer form .form--button--send {
+    font-size: 20px;
+    padding: 25px 16px;
+    width: 500px;
+    border-radius: 60px;
+  }
+  .about .about--block--left::before {
+    font-size: 270px;
+    top: -155px;
+  }
+  .reader .reader--block--right::before {
+    font-size: 270px;
+    top: -155px;
+  }
+  .reader .reader--block--right::after {
+    font-size: 270px;
+    bottom: -155px;
+  }
+  .brand .brand--block--right::before {
+    font-size: 300px;
+    top: -155px;
+  }
+  .author .author--block--left::before {
+    font-size: 300px;
+    top: -155px;
+  }
+  footer form input {
+    width: 590px;
+    font-size: 20px;
+    padding: 12px;
+    color: #5a5a5a;
+    margin: 20px 0;
+  }
+  footer .block-txt .left span {
+    font-size: 16px;
+  }
+  footer .block-txt .right a {
+    font-size: 16px;
+  }
+  footer .sign-in {
+    margin: 25px 0;
+    color: #fff;
+    font-size: 16px;
+  }
+  .nav-fixed::before {
+    content: '';
+    width: 35%;
+    height: 100%;
+    left: 0px;
+  }
+  footer form .form--button--block {
+    margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1339px) {
+  @keyframes title1 {
+    15% {
+      transform: translate(0px, -765px);
+    }
+    100% {
+      color: #000;
+      transform: translate(0px, 0px);
+    }
+  }
+  @keyframes title2 {
+    15% {
+      transform: translate(0px, -800px);
+    }
+    100% {
+      color: #000;
+      transform: translate(0px, 0px);
+    }
+  }
+  @keyframes title3 {
+    15% {
+      transform: translate(0px, -800px);
+    }
+    100% {
+      color: #000;
+      transform: translate(0px, 0px);
+    }
+  }
+  @keyframes title4 {
+    15% {
+      transform: translate(0px, -820px);
+    }
+    100% {
+      color: #000;
+      transform: translate(0px, 0px);
+    }
+  }
+  #title1 {
+    animation: title1 0.8s linear 0s 1 alternate forwards;
+  }
+  #title2 {
+    animation: title2 0.8s linear 0s 1 alternate forwards;
+  }
+  #title3 {
+    animation: title3 0.8s linear 0s 1 alternate forwards;
+  }
+  #title4 {
+    animation: title4 0.8s linear 0s 1 alternate forwards;
+  }
+  section {
+    overflow: hidden;
+    min-height: 800px;
+  }
+  article {
+    padding: 0 100px 0 130px;
+  }
+  .home .home--block--left .abs {
+    padding-left: 75px;
+  }
+  .home .home--block--left .home--timer--block .cifra {
+    font-size: 170px;
+  }
+  .home .home--block--left .home--timer--block .cifra-sh {
+    font-size: 170px;
+  }
+  .home .home--block--left .home--timer--block .week {
+    font-size: 57px;
+    margin-left: 6px;
+  }
+  .home .home--block--left .home--timer--block .do-to {
+    font-size: 25px;
+    margin-left: 7px;
+  }
+  .home .home--block--left .home--timer--block .soc-ico {
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: 35px;
+    margin-left: 7px;
+  }
+  .home .home--block--left .home--timer--block .soc-ico a {
+    width: 34px;
+    height: 34px;
+  }
+  .home .home--block--left .home--timer--block::before {
+    content: 'осталось';
+    font-size: 65px;
+    left: -210px;
+    top: 48px;
+  }
+  .home .home--block--left .home--timer--block {
+    position: relative;
+    display: none;
+    margin-left: 80px;
+    transform: translate(0px, -350px);
+  }
+  .home .home--block--left .logo {
+    left: 75px;
+    top: 10px;
+    width: 110px;
+    height: 89px;
+  }
+  .home .home--block--right h3 {
+    font-size: 40px;
+  }
+  .home .home--block--right p {
+    font-size: 25px;
+    margin-top: 15px;
+  }
+  .home .home--block--right .mouse-reed i {
+    height: 60px;
+    top: -25px;
+    left: -57px;
+  }
+  .home ul li a {
+    margin-right: 35px;
+    font-size: 14px;
+  }
+  .home nav .button {
+    font-size: 14px;
+    padding: 15px 28px 15px;
+  }
+  .home .home--block--right .mouse-reed {
+    font-size: 16px;
+    margin: 55px 55px 0;
+  }
+  .nav-fixed .cifra {
+    position: relative;
+    font-size: 110px;
+    top: 20px;
+    letter-spacing: -5px;
+  }
+  .nav-fixed .cifra-sh {
+    display: block;
+    left: 150px;
+    top: 11px;
+    font-size: 110px;
+    letter-spacing: -5px;
+  }
+  .nav-fixed ul li a {
+    font-size: 14px;
+    margin-right: 30px;
+  }
+  .nav-fixed .cifra-d {
+    top: 19px;
+    font-size: 38px;
+    margin-left: 1px;
+  }
+  .nav-fixed .cifra-d::before {
+    top: 42px;
+    left: 34px;
+    font-size: 20px;
+    margin-left: -31px;
+  }
+  .nav-fixed {
+    top: 25px;
+    height: 55px;
+  }
+  .nav-fixed .nav-block {
+    height: 55px;
+  }
+  .nav-fixed .logo-fix {
+    width: 100px;
+    height: 35px;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+  .button {
+    font-size: 14px;
+    padding: 10px 30px 12px;
+  }
+  .nav-fixed ul {
+    margin-top: 12px;
+  }
+  article p {
+    font-size: 14px;
+    margin: 15px 0;
+  }
+  .about .about--block--left h2 {
+    font-size: 40px;
+    left: 18px;
+    top: 65px;
+    transform: translate(0px, -765px);
+  }
+  article ul li {
+    margin: 14px 0px 15px 40px;
+    font-size: 14px;
+  }
+  article ul li::before {
+    content: '';
+    top: 3px;
+    left: -45px;
+    width: 14px;
+    height: 14px;
+  }
+  span.comment {
+    font-size: 20px;
+    margin: 60px 0 0 0;
+    padding: 0 0 0 135px;
+  }
+  span.comment::before {
+    content: '«';
+    top: -41px;
+    left: 85px;
+    font-size: 80px;
+  }
+  .reader h2 {
+    font-size: 40px;
+    left: -46px;
+    top: 124px;
+  }
+  .author .author--block--left h2 {
+    font-size: 40px;
+    left: -30px;
+    top: 13px;
+    transform: translate(0px, -800px);
+  }
+  .brand .brand--block--right h2 {
+    font-size: 40px;
+    color: #000;
+    position: absolute;
+    left: -30px;
+    top: 15px;
+    font-weight: 700;
+    display: none;
+    transform: translate(0px, -800px);
+  }
+  .content {
+    position: relative;
+    display: table;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .socials .socials--block--left h2 {
+    font-size: 64px;
+    color: #fff;
+    padding: 113px 90px 0 0px;
+    margin-bottom: 41px;
+  }
+  .socials .socials--block--left p {
+    color: #000;
+    padding: 0 130px 0 0;
+  }
+  h3 {
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+    font-family: 'MuseoSansBold', sans-serif;
+    margin-bottom: 35px;
+    padding: 93px 0 0 122px;
+  }
+  footer h4 {
+    font-size: 40px;
+  }
+  footer form {
+    margin-top: 45px;
+  }
+  footer form .form--button--send {
+    font-size: 18px;
+    padding: 20px 10px;
+    width: 488px;
+    border-radius: 60px;
+  }
+  .about .about--block--left::before {
+    font-size: 270px;
+    top: -155px;
+  }
+  .reader .reader--block--right::before {
+    font-size: 270px;
+    top: -155px;
+  }
+  .reader .reader--block--right::after {
+    font-size: 270px;
+    bottom: -155px;
+  }
+  .brand .brand--block--right::before {
+    font-size: 300px;
+    top: -155px;
+  }
+  .author .author--block--left::before {
+    font-size: 300px;
+    top: -155px;
+  }
+  footer form input {
+    width: 590px;
+    font-size: 20px;
+    padding: 12px;
+    color: #5a5a5a;
+    margin: 20px 0;
+  }
+  footer .block-txt .left span {
+    font-size: 16px;
+  }
+  footer .block-txt .right a {
+    font-size: 16px;
+  }
+  footer .sign-in {
+    margin: 25px 0;
+    color: #fff;
+    font-size: 16px;
+  }
+  .nav-fixed::before {
+    content: '';
+    width: 25%;
+    height: 100%;
+    left: 0px;
+  }
+  footer form .form--button--block {
+    margin-top: 30px;
+  }
+  footer h4 {
+    font-size: 35px;
+  }
+  footer .footer {
+    height: 70px;
   }
 }
