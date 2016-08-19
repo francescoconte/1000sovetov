@@ -1470,25 +1470,104 @@
         var heightHome =  $(window).height();     
        
         if (heightHome == v.dtop) { 
+        // первый слайд        
+        $('#title1').fadeIn(500);
+        $('#txt1').fadeIn(500);
+        $('#image-ani1').fadeIn(500);
+        // первый слайд    
             
-        $('#title1').fadeIn(1000);
-        $('#title3').fadeOut();
-        $('#title2').fadeOut();
-        $('#title4').fadeOut();
-        $('#fixed').fadeIn(1000); 
+        // --------------- close all slide ------------------//  
+            
+                                
+        // шестой слайд close        
+        $('#title6').delay(800).fadeOut();
+        $('#txt6').delay(800).fadeOut();
+        $('#image-ani6').delay(800).fadeOut();
+        // шестой слайд close        
+  
+            
+        // второй слайд close               
+        $('#title2').delay(800).fadeOut();
+        $('#txt2').delay(800).fadeOut();
+        $('#txt2-2').delay(800).fadeOut();
+        $('#image-ani2').delay(800).fadeOut();
+         // второй слайд close 
+            
+        // третий слайд         
+        $('#title3').delay(800).fadeOut();
+        $('#txt3').delay(800).fadeOut();
+        $('#txt3-2').delay(800).fadeOut(); 
+        $('#txt3-3').delay(800).fadeOut(); 
+        $('#image-ani3').delay(800).fadeOut();
+        // третий слайд         
+              
+        // четвертый слайд close         
+        $('#title4').delay(800).fadeOut();
+        $('#txt4').delay(800).fadeOut();
+        $('#txt4-2').delay(800).fadeOut(); 
+        $('#txt4-3').delay(800).fadeOut(); 
+        $('#image-ani4').delay(800).fadeOut();
+        // четвертый слайд close  
+                
+        // пятый слайд close        
+        $('#title5').delay(800).fadeOut(); 
+        $('#txt5').delay(800).fadeOut(); 
+        $('#image-ani5').delay(800).fadeOut(); 
+        // пятый слайд close 
+                       
+        // --------------- close all slide ------------------//    
+            
+        
+        $('#fixed').fadeIn(800); 
         $('#nav1').addClass('active');
         $('#nav3').removeClass('active');
         $('#nav5').removeClass('active');
         $('#nav2').removeClass('active');
-        $('#nav4').removeClass('active'); }
+        $('#nav4').removeClass('active');         }
             
             else {
-            if (heightHome * 2 == v.dtop) {
-        $('#title2').fadeIn(1000);
-        $('#title3').fadeOut();
-        $('#title1').fadeOut();
-        $('#title4').fadeOut();        
-        $('#fixed').fadeIn(1000);
+            if (heightHome * 2 == v.dtop) { 
+        // первый слайд close                        
+        $('#title1').delay(800).fadeOut();
+        $('#txt1').delay(800).fadeOut();
+        $('#image-ani1').delay(800).fadeOut();
+        // первый слайд close
+        
+        // пятый слайд close        
+        $('#title5').delay(800).fadeOut(); 
+        $('#txt5').delay(800).fadeOut(); 
+        $('#image-ani5').delay(800).fadeOut(); 
+        // пятый слайд close 
+                
+        
+        // третий слайд         
+        $('#title3').delay(800).fadeOut();
+        $('#txt3').delay(800).fadeOut();
+        $('#txt3-2').delay(800).fadeOut(); 
+        $('#txt3-3').delay(800).fadeOut(); 
+        $('#image-ani3').delay(800).fadeOut();
+        // третий слайд         
+              
+        // четвертый слайд close         
+        $('#title4').delay(800).fadeOut();
+        $('#txt4').delay(800).fadeOut();
+        $('#txt4-2').delay(800).fadeOut(); 
+        $('#txt4-3').delay(800).fadeOut(); 
+        $('#image-ani4').delay(800).fadeOut();
+        // четвертый слайд close           
+                
+                
+        // второй слайд         
+        $('#title2').fadeIn(500);
+        $('#txt2').fadeIn(500); 
+        $('#txt2-2').fadeIn(500); 
+        $('#image-ani2').fadeIn(500);
+        // второй слайд        
+                
+                
+                
+        
+        $('#fixed').fadeIn(800);
         $('#nav2').addClass('active');
         $('#nav3').removeClass('active');
         $('#nav1').removeClass('active');
@@ -1497,11 +1576,52 @@
             } 
             else {
             if (heightHome * 3 == v.dtop) {
-        $('#title1').fadeOut();
-        $('#title2').fadeOut();
-        $('#title4').fadeOut();
-        $('#title3').fadeIn(1000);
-        $('#fixed').fadeIn(1000);
+        // первый слайд close                        
+        $('#title1').delay(800).fadeOut();
+        $('#txt1').delay(800).fadeOut();
+        $('#image-ani1').delay(800).fadeOut();
+        // первый слайд close
+                
+        // второй слайд close               
+        $('#title2').delay(800).fadeOut();
+        $('#txt2').delay(800).fadeOut();
+        $('#txt2-2').delay(800).fadeOut();
+        $('#image-ani2').delay(800).fadeOut();
+        // второй слайд close 
+        
+                      
+        // четвертый слайд close         
+        $('#title4').delay(800).fadeOut();
+        $('#txt4').delay(800).fadeOut();
+        $('#txt4-2').delay(800).fadeOut(); 
+        $('#txt4-3').delay(800).fadeOut(); 
+        $('#image-ani4').delay(800).fadeOut();
+        // четвертый слайд close 
+                
+        // пятый слайд close        
+        $('#title5').delay(800).fadeOut(); 
+        $('#txt5').delay(800).fadeOut(); 
+        $('#image-ani5').delay(800).fadeOut(); 
+        // пятый слайд close 
+                
+                                
+        // шестой слайд close        
+        $('#title6').delay(800).fadeOut();
+        $('#txt6').delay(800).fadeOut();
+        $('#image-ani6').delay(800).fadeOut();
+        // шестой слайд close        
+  
+                        
+                
+        // третий слайд         
+        $('#title3').fadeIn(500);
+        $('#txt3').fadeIn(500); 
+        $('#txt3-2').fadeIn(500); 
+        $('#txt3-3').fadeIn(500); 
+        $('#image-ani3').fadeIn(500);
+        // третий слайд  
+
+        $('#fixed').fadeIn(800);
         $('#nav3').addClass('active');
         $('#nav2').removeClass('active');
         $('#nav1').removeClass('active');
@@ -1510,9 +1630,58 @@
         } 
             else {
             if (heightHome * 4 == v.dtop) {
-        $('#title1').fadeOut();
-        $('#title4').fadeIn(1000);
-        $('#fixed').fadeIn(1000);
+                
+        // --------------- close all slide ------------------//              
+                
+        // первый слайд close                        
+        $('#title1').delay(800).fadeOut();
+        $('#txt1').delay(800).fadeOut();
+        $('#image-ani1').delay(800).fadeOut();
+        // первый слайд close
+                
+        // второй слайд close               
+        $('#title2').delay(800).fadeOut();
+        $('#txt2').delay(800).fadeOut();
+        $('#txt2-2').delay(800).fadeOut();
+        $('#image-ani2').delay(800).fadeOut();
+        // второй слайд close 
+                
+        // третий слайд close       
+        $('#title3').delay(800).fadeOut();
+        $('#txt3').delay(800).fadeOut();
+        $('#txt3-2').delay(800).fadeOut(); 
+        $('#txt3-3').delay(800).fadeOut(); 
+        $('#image-ani3').delay(800).fadeOut();
+        // третий слайд close
+                 
+        // пятый слайд close        
+        $('#title5').delay(800).fadeOut(); 
+        $('#txt5').delay(800).fadeOut(); 
+        $('#image-ani5').delay(800).fadeOut(); 
+        // пятый слайд close 
+                
+                
+                                
+        // шестой слайд close        
+        $('#title6').delay(800).fadeOut();
+        $('#txt6').delay(800).fadeOut();
+        $('#image-ani6').delay(800).fadeOut();
+        // шестой слайд close        
+            
+        // --------------- close all slide ------------------//    
+         
+                
+                
+        // четвертый слайд         
+        $('#title4').fadeIn(500);
+        $('#txt4').fadeIn(500); 
+        $('#txt4-2').fadeIn(500); 
+        $('#txt4-3').fadeIn(500); 
+        $('#image-ani4').fadeIn(500);
+        // четвертый слайд         
+                
+
+        $('#fixed').fadeIn(800);
         $('#nav4').addClass('active');
         $('#nav2').removeClass('active');
         $('#nav3').removeClass('active');
@@ -1522,10 +1691,77 @@
             } 
             else {
             if (v.dtop == 0) {
-        $('#fixed').fadeOut(1000);
-        $('#title1').fadeOut();        
+
+                
+        
+        // первый слайд close                     
+        $('#title1').delay(800).fadeOut();
+        $('#txt1').delay(800).fadeOut();
+        $('#image-ani1').delay(800).fadeOut();        
+                
+        // четвертый слайд close         
+        $('#title4').delay(800).fadeOut();
+        $('#txt4').delay(800).fadeOut();
+        $('#txt4-2').delay(800).fadeOut(); 
+        $('#txt4-3').delay(800).fadeOut(); 
+        $('#image-ani4').delay(800).fadeOut();
+        // четвертый слайд close            
+                
+                
+        $('#fixed').fadeOut(1000);     
             } else {
             if (heightHome * 6 == v.dtop) {
+                
+                    // --------------- close all slide ------------------//
+                
+        // первый слайд close                     
+        $('#title1').delay(800).fadeOut();
+        $('#txt1').delay(800).fadeOut();
+        $('#image-ani1').delay(800).fadeOut();        
+        // первый слайд close   
+            
+        // второй слайд close               
+        $('#title2').delay(800).fadeOut();
+        $('#txt2').delay(800).fadeOut();
+        $('#txt2-2').delay(800).fadeOut();
+        $('#image-ani2').delay(800).fadeOut();
+         // второй слайд close 
+            
+        // третий слайд         
+        $('#title3').delay(800).fadeOut();
+        $('#txt3').delay(800).fadeOut();
+        $('#txt3-2').delay(800).fadeOut(); 
+        $('#txt3-3').delay(800).fadeOut(); 
+        $('#image-ani3').delay(800).fadeOut();
+        // третий слайд         
+              
+        // четвертый слайд close         
+        $('#title4').delay(800).fadeOut();
+        $('#txt4').delay(800).fadeOut();
+        $('#txt4-2').delay(800).fadeOut(); 
+        $('#txt4-3').delay(800).fadeOut(); 
+        $('#image-ani4').delay(800).fadeOut();
+        // четвертый слайд close  
+                
+                
+        // пятый слайд close        
+        $('#title5').delay(800).fadeOut(); 
+        $('#txt5').delay(800).fadeOut(); 
+        $('#image-ani5').delay(800).fadeOut(); 
+        // пятый слайд close 
+                
+    
+                
+                       
+        // --------------- close all slide ------------------//  
+            
+        // шестой слайд         
+        $('#txt6').fadeIn(500); 
+        $('#image-ani6').fadeIn(500);
+        // шестой слайд              
+            
+                
+            
             $('#fixed').fadeOut(1000);
             
             
@@ -1533,14 +1769,67 @@
             
             } else {
             if (heightHome * 5 == v.dtop) {
-            $('#title5').delay(500).fadeIn(1000);    
-            $('.txt').delay(500).fadeIn(1000);    
+                
+
+            
+        // --------------- close all slide ------------------//
+                
+        // первый слайд close                     
+        $('#title1').delay(800).fadeOut();
+        $('#txt1').delay(800).fadeOut();
+        $('#image-ani1').delay(800).fadeOut();        
+        // первый слайд close   
+            
+        // второй слайд close               
+        $('#title2').delay(800).fadeOut();
+        $('#txt2').delay(800).fadeOut();
+        $('#txt2-2').delay(800).fadeOut();
+        $('#image-ani2').delay(800).fadeOut();
+         // второй слайд close 
+            
+        // третий слайд         
+        $('#title3').delay(800).fadeOut();
+        $('#txt3').delay(800).fadeOut();
+        $('#txt3-2').delay(800).fadeOut(); 
+        $('#txt3-3').delay(800).fadeOut(); 
+        $('#image-ani3').delay(800).fadeOut();
+        // третий слайд         
+              
+        // четвертый слайд close         
+        $('#title4').delay(800).fadeOut();
+        $('#txt4').delay(800).fadeOut();
+        $('#txt4-2').delay(800).fadeOut(); 
+        $('#txt4-3').delay(800).fadeOut(); 
+        $('#image-ani4').delay(800).fadeOut();
+        // четвертый слайд close  
+                       
+                
+                                
+        // шестой слайд close        
+        $('#title6').delay(800).fadeOut();
+        $('#txt6').delay(800).fadeOut();
+        $('#image-ani6').delay(800).fadeOut();
+        // шестой слайд close        
+            
+        // --------------- close all slide ------------------//    
+            
+                       
+             
+        // пятый слайд         
+        $('#title5').fadeIn(500);
+        $('#txt5').fadeIn(500); 
+        $('#image-ani5').fadeIn(500);
+        // пятый слайд          
+                
+
+                
+                
             $('#nav5').addClass('active');
             $('#nav2').removeClass('active');
             $('#nav3').removeClass('active');
             $('#nav4').removeClass('active');    
             $('#nav1').removeClass('active');    
-            $('#fixed').fadeIn(1000);  
+            $('#fixed').fadeIn(800);  
             $('#title1').fadeOut();
             }    
             }  
