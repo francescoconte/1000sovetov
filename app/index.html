@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>@1000sovetov</title>
+    <title>Федеральный портал советов</title>
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
@@ -13,13 +13,14 @@
     <meta name="description" content="">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="js/jquery.preload.min.js"></script>
     <script src="js/jquery.fullPage.js"></script>
     <script type="text/javascript" src="js/jquery.measurer.js"></script>
     <script type="text/javascript" src="js/jquery.gradienttext.js"></script>
     <script src="js/main.js"></script>
   </head>
   <body>
-    <div id="fixed" class="nav-fixed"><a class="logo-fix"></a><span class="cifra-sh">19</span><span class="cifra">19 </span><span class="cifra-d">недель</span>
+    <div id="fixed" class="nav-fixed"><a class="logo-fix"></a><a href="#start-info"><span class="cifra-sh">18</span><span class="cifra">18 </span><span class="cifra-d">недель</span></a>
       <div class="nav-block">
         <div class="middle"><a href="#contact-info" class="button">Войти и протестировать</a>
           <ul class="topmenu">
@@ -38,7 +39,7 @@
         <div class="home--block--left">
           <div class="abs">
             <div class="middle">
-              <div id="timer" class="home--timer--block ani-timer"><span class="cifra-sh">19</span><span class="cifra">19</span><span class="week">недель</span><span class="do-to">до запуска проекта</span>
+              <div id="timer" class="home--timer--block ani-timer"><span class="cifra-sh">18</span><span class="cifra">18</span><span class="week">недель</span><span class="do-to">до запуска проекта</span>
                 <div class="soc-ico"><a class="face"></a><a class="vk"></a><a class="tv"></a></div>
               </div>
             </div>
@@ -70,7 +71,7 @@
         </nav>
       </section>
       <section id="section1" class="section about">
-        <div class="about--block--left">
+        <div id="about-left" class="about--block--left">
           <div class="middle">
             <article>
               <h2 id="title1"><span>о нас</span></h2>
@@ -169,7 +170,7 @@
                     <input placeholder="E-mail">
                   </div>
                   <div class="form--button--block"><a class="form--button--send">Отправить заявку на тестирвоание</a></div>
-                  <div>
+                  <div class="sign">
                     <p class="sign-in">Уже в команде бета-тестеров? <a class="">Войдите на сайт.</a></p>
                   </div>
                 </form>
