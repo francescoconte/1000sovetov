@@ -499,7 +499,7 @@ ul li a:hover {
 }
 section {
   overflow: hidden;
-  min-height: 1285px;
+  min-height: 800px;
 }
 .content {
   position: relative;
@@ -1465,7 +1465,7 @@ footer .block-txt .right a .real {
   animation: txt1 0.4s linear 1s 1 alternate forwards;
 }
 #image-ani5 {
-  transform: translate(0px, 1200px);
+  transform: translate(0px, 1900px);
   animation: img1 0.5s linear 0s 1 alternate forwards;
 }
 #titl6 {
@@ -1477,7 +1477,7 @@ footer .block-txt .right a .real {
   animation: txt1 0.5s linear 0.6s 1 alternate forwards;
 }
 #image-ani6 {
-  transform: translate(0px, 1200px);
+  transform: translate(0px, 1900px);
   animation: img1 0.5s linear 0s 1 alternate forwards;
 }
 @media screen and (min-width: 1800px) and (max-width: 2559px) {
@@ -1551,15 +1551,15 @@ footer .block-txt .right a .real {
   }
   #title5 {
     transform: translate(0px, 4800px);
-    animation: title1 1.5s linear 0s 1 alternate forwards;
+    animation: title1 1s linear 0s 1 alternate forwards;
   }
   #txt5 {
-    transform: translate(0px, 5200px);
-    animation: txt1 0.5s linear 1.5s 1 alternate forwards;
+    transform: translate(0px, 8200px);
+    animation: txt1 0.4s linear 1s 1 alternate forwards;
   }
   #image-ani5 {
-    transform: translate(0px, 1200px);
-    animation: img1 1s linear 0s 1 alternate forwards;
+    transform: translate(0px, 1900px);
+    animation: img1 0.5s linear 0s 1 alternate forwards;
   }
   #title6 {
     transform: translate(0px, 4800px);
@@ -1567,15 +1567,15 @@ footer .block-txt .right a .real {
   }
   #txt6 {
     transform: translate(0px, 5200px);
-    animation: txt1 0.3s linear 1.5s 1 alternate forwards;
+    animation: txt1 0.3s linear 1s 1 alternate forwards;
   }
   #image-ani6 {
-    transform: translate(0px, 1200px);
-    animation: img1 1s linear 0s 1 alternate forwards;
+    transform: translate(0px, 1900px);
+    animation: img1 0.5s linear 0s 1 alternate forwards;
   }
   section {
     overflow: hidden;
-    min-height: 900px;
+    min-height: 750px;
   }
   .home .home--block--left .abs {
     padding-left: 120px;
@@ -1878,8 +1878,8 @@ footer .block-txt .right a .real {
     animation: txt1 0.5s linear 1.5s 1 alternate forwards;
   }
   #image-ani5 {
-    transform: translate(0px, 1200px);
-    animation: img1 1s linear 0s 1 alternate forwards;
+    transform: translate(0px, 1900px);
+    animation: img1 0.5s linear 0s 1 alternate forwards;
   }
   #title6 {
     transform: translate(0px, 4800px);
@@ -1890,12 +1890,12 @@ footer .block-txt .right a .real {
     animation: txt1 0.3s linear 1.5s 1 alternate forwards;
   }
   #image-ani6 {
-    transform: translate(0px, 1200px);
-    animation: img1 1s linear 0s 1 alternate forwards;
+    transform: translate(0px, 1900px);
+    animation: img1 0.5s linear 0s 1 alternate forwards;
   }
   section {
     overflow: hidden;
-    min-height: 800px;
+    min-height: 650px;
   }
   article {
     padding: 0 100px 0 130px;
@@ -2211,8 +2211,8 @@ footer .block-txt .right a .real {
     animation: txt1 0.5s linear 1s 1 alternate forwards;
   }
   #image-ani5 {
-    transform: translate(0px, 1200px);
-    animation: img1 0.8s linear 0s 1 alternate forwards;
+    transform: translate(0px, 1900px);
+    animation: img1 0.5s linear 0s 1 alternate forwards;
   }
   #title6 {
     transform: translate(0px, 4800px);
@@ -2223,12 +2223,12 @@ footer .block-txt .right a .real {
     animation: txt1 0.3s linear 1s 1 alternate forwards;
   }
   #image-ani6 {
-    transform: translate(0px, 1200px);
-    animation: img1 0.8s linear 0s 1 alternate forwards;
+    transform: translate(0px, 1900px);
+    animation: img1 0.5s linear 0s 1 alternate forwards;
   }
   section {
     overflow: hidden;
-    min-height: 800px;
+    min-height: 650px;
   }
   article {
     padding: 0 100px 0 130px;
